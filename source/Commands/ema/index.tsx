@@ -9,6 +9,7 @@ const Ema: FC<EmaType> = ({ flags }) => {
 		Array<{ value: string; label: string }>
 	>([]);
 
+	const [loading, setLoading] = useState<Boolean>(true);
 	const { exit } = useApp();
 
 	const handleSelect = (
@@ -42,12 +43,19 @@ const Ema: FC<EmaType> = ({ flags }) => {
 			}
 
 			setEmulators(formattedEmulators);
+			setLoading(false)
 		};
 
 		getList();
 	}, []);
 
-	return <EmaLayout emulators={emulators} onSelect={handleSelect} />;
+	return (
+		<EmaLayout
+			emulators={emulators}
+			onSelect={handleSelect}
+			loading={loading}
+		/>
+	);
 };
 
 export default Ema;

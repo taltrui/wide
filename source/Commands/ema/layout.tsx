@@ -1,27 +1,19 @@
-import React, { FC, Fragment } from "react";
+import React, { FC } from "react";
 import { Newline, Text } from "ink";
 import { EmaLayoutType } from "../../types";
-import Spinner from "ink-spinner";
 import SelectInput from "ink-select-input";
+import Loading from "../../components/Loading";
 
-const EmaLayout: FC<EmaLayoutType> = ({ emulators, onSelect }) =>
-	emulators.length === 0 ? (
+const EmaLayout: FC<EmaLayoutType> = ({ emulators, onSelect, loading }) => (
+	<Loading loading={loading}>
+		<Text bold>
+			Emuladores disponibles: <Newline />
+		</Text>
+		<SelectInput items={emulators} onSelect={onSelect} />
 		<Text>
 			<Newline />
-			<Spinner type="point" />
-			<Text> Iniciando</Text>
-			<Newline />
 		</Text>
-	) : (
-		<Fragment>
-			<Text bold>
-				Emuladores disponibles: <Newline />
-			</Text>
-			<SelectInput items={emulators} onSelect={onSelect} />
-			<Text>
-				<Newline />
-			</Text>
-		</Fragment>
-	);
+	</Loading>
+);
 
 export default EmaLayout;

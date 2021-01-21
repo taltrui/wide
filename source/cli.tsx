@@ -28,4 +28,6 @@ const cli = meow(
 	}
 );
 
-render(<App flags={cli.flags} command={cli.input[0]} />);
+render(
+	<App flags={cli.flags} command={cli.input[0]} args={cli.input.slice(1)} />
+);

@@ -6,19 +6,32 @@ export interface EmaFlagsType {
 	name?: string;
 }
 
-export type FlagsType = EmaFlagsType;
+export interface WsmFlagsType {
+	rootDir?: string;
+	rescan?: boolean;
+}
+
+export type FlagsType = EmaFlagsType | WsmFlagsType;
 
 export interface EmaType {
 	flags?: EmaFlagsType;
+	args?: Array<string>;
+}
+
+export interface WsmType {
+	flags?: WsmFlagsType;
+	args?: Array<string>;
 }
 
 export interface EmaLayoutType {
 	emulators: Array<{ value: string; label: string }>;
 	onSelect: (item: Item<string>) => void;
+	loading: Boolean;
 }
 
 export interface CommandsType {
-	[ema: string]: FC<EmaType>;
+	'ema': FC<EmaType>;
+	'wsm': FC<WsmType>;
 }
 
-export type CommandUiType = FC<EmaType> | undefined;
+export type CommandUiType = FC<EmaType> | FC<WsmType> | undefined;

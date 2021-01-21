@@ -19,12 +19,14 @@
 		"ink": "^3.0.8",
 		"ink-select-input": "^4.2.0",
 		"ink-spinner": "^4.0.1",
+		"lowdb": "^1.0.0",
 		"meow": "^8.0.0",
 		"react": "^17.0.1"
 	},
 	"devDependencies": {
 		"@ava/typescript": "^1.1.1",
 		"@sindresorhus/tsconfig": "^0.8.0",
+		"@types/lowdb": "^1.0.9",
 		"@types/react": "^17.0.0",
 		"ava": "^3.14.0",
 		"chalk": "^4.1.0",
