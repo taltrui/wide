@@ -30,8 +30,7 @@ export interface EmaLayoutType {
 }
 
 export interface CommandsType {
-	'ema': FC<EmaType>;
-	'wsm': FC<WsmType>;
+	[key: string]: FC<EmaType> | FC<WsmType>;
 }
 
-export type CommandUiType = FC<EmaType> | FC<WsmType> | undefined;
+export type CommandUiType = FC<EmaType> | FC<WsmType>;
