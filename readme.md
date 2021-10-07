@@ -9,7 +9,7 @@
 $ npm install --global wide
 ```
 
-
+.
 ## CLI
 
 ```
