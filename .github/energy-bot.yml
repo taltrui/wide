@@ -3,9 +3,8 @@ handlers:
     active: true
     assignees:
       - taltrui
-      - segulino
     labels:
-      - Release
+      - ReleaseTEST
   mergeable:
     active: true
   cleanup_release:
