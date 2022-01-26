@@ -1,0 +1,20 @@
+handlers:
+  create_new_release:
+    active: true
+    assignees:
+      - taltrui
+      - segulino
+    labels:
+      - Release
+  mergeable:
+    active: true
+  cleanup_release:
+    active: true
+  is_semantic:
+    active: true
+  notify_and_clean_released:
+    active: true
+    notify: false
+    clean: true
+  notify_merge_to_release:
+    active: true
