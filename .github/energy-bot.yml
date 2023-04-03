@@ -6,6 +6,7 @@ handlers:
     labels:
       - ReleaseTEST
   mergeable:
+    version: 2
     active: true
   cleanup_release:
     active: true
@@ -17,3 +18,20 @@ handlers:
     clean: true
   notify_merge_to_release:
     active: true
+  level_with_master:
+    active: true
+  complete_new_pr:
+    active: true
+  completition_metrics:
+    active: true
+    config:
+      sheet_id: 1_ccV3CAHd0T5f2Ys9tOWe7fjO8YpfRHorPs-7CoQKyI
+  assigner:
+    active: true
+    config:
+      assignees:
+        - taltrui
+        - glipina
+        - segulino
+  
+  
